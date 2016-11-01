@@ -1,13 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Nav from './components/test.js'
+import Header from './components/header/index.js'
+import route from './route/route'
+import { Router, browserHistory } from 'react-router'
+
 
 class App extends React.Component {
     render() {
         return (
-            <p>hello wor</p>
+            <Nav />
         )
     }
 }
 
-ReactDOM.render(<Nav />, document.getElementById('app'))
+ReactDom.render((
+        <Router history={history}>
+            {route}
+        </Router>
+), document.getElementById('app'))
+
