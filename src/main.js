@@ -13,8 +13,8 @@ class App extends React.Component {
     }
 }
 
-ReactDom.render((
-        <Router history={history}>
+ReactDOM.render((
+        <Router history={browserHistory}>
             {route}
         </Router>
 ), document.getElementById('app'))
